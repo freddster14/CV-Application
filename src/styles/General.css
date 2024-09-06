@@ -1,0 +1,10 @@
+.general {
+    display: flex;
+    flex-direction: column;
+    width: min(250px, 100%);
+}
+
+.general input {
+    margin-bottom: 10px;
+    margin-top: 1px;
+}
