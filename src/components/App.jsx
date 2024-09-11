@@ -14,10 +14,10 @@ function App() {
   const [phone, setPhone] = useState("(123) 456-7890");
   const [address, setAddress] = useState("Houston, TX");
   const [link, setLink] = useState("google.com");
-  const [school, setSchool] = useState("Harvard");
+  const [school, setSchool] = useState("Harvard University");
   const [major, setMajor] = useState("Computer Science");
   const [graduationDate, setGraduationDate] = useState("May, 2026");
-  const [degree, setDegree] = useState(undefined)
+  const [degree, setDegree] = useState("Choose A Degree")
 
   return (
     <>

@@ -6,7 +6,7 @@
 }
 
 .general input {
-    color: #303D50;
+    color: inherit;
     font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
     font-weight: bold;
     margin: 0px;
@@ -57,6 +57,7 @@ input.position {
 }
 
 .general-info-box div {
+    
     color: white;
     display: flex;
     align-items: center;

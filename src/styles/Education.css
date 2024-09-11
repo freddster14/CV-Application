@@ -4,8 +4,11 @@
 }
 
 h1{
-    font-size: 2.3em;
+    font-size: 2.4em;
+    margin-bottom: 20px;
 }
+
+
 
 .education-header {
     display: flex;
@@ -22,6 +25,7 @@ h1{
     background-repeat: no-repeat;
     border-radius: 50%;
     background-color: #303D50;
+    color: transparent;
     border: none;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.658);
     transition: transform 0.25s linear 0.1s;
@@ -32,17 +36,54 @@ h1{
 
 }
 
+.education-form {
+    display: grid;
+    grid-template-columns: 1fr 100%;
+}
+
+.education-form input {
+    min-width: 75px;
+}
+
+
 .degree-select {
     appearance: none;
-    background-color: white;
+    grid-column: 1 / -1;
+    background-color: transparent;
     color: #213547;
     font-size: 1.5em;
     width: fit-content;
-    border: 1px solid white;
+    border: 1px solid transparent;
     font-weight: bold;
+    padding: 3px 8px;
+    margin-right: auto;
 }
 
 .degree-select:focus, .degree-select:hover {
     appearance: auto;
     border: 1px solid black ;
+}
+
+.degree-select option {
+    background-color:  #213547;
+    color: white;
+    border-radius: 10px;
+}
+
+.major{
+    grid-column: 1 / -1;
+    font-size: 1.5em;
+    color: inherit;
+    font-weight: bold;
+    padding: 3px 10px;
+}
+
+
+.school {
+    grid-row: 3;
+
+}
+
+.graduation {
+    grid-row: 3;
 }
