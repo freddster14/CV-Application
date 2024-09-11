@@ -1,0 +1,48 @@
+.education-container {
+    margin-top: 20px;
+    padding: 20px 55px;
+}
+
+h1{
+    font-size: 2.3em;
+}
+
+.education-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.education-header button {
+    width: 42px;
+    height: 42px;
+    background-image: url(../assets/icons8-edit.png);
+    background-size: 65%;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    background-color: #303D50;
+    border: none;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.658);
+    transition: transform 0.25s linear 0.1s;
+}
+
+.education-header button:hover, .education-header button:focus {
+    transform: scale(1.2);
+
+}
+
+.degree-select {
+    appearance: none;
+    background-color: white;
+    color: #213547;
+    font-size: 1.5em;
+    width: fit-content;
+    border: 1px solid white;
+    font-weight: bold;
+}
+
+.degree-select:focus, .degree-select:hover {
+    appearance: auto;
+    border: 1px solid black ;
+}

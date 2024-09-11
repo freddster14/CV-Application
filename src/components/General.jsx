@@ -84,7 +84,7 @@ function Input({name, value, handleChange, type, index}) {
 
     if(index > 2) {
         return (
-            <div>
+            <div className={name}>
             <img src={array[index - 3]} alt={name}/>
             <input  
             className={name} 
@@ -104,7 +104,7 @@ function Input({name, value, handleChange, type, index}) {
             type={type} 
             value={value}
             style={{width: inputWidth + 'ch'}}
-            onInput={handleInput}
+            onChange={handleInput}
             />
         </>
 

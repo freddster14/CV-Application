@@ -1,11 +1,15 @@
 #root {
   max-width: 1200px;
+  width: 90%;
   justify-content: space-between;
   margin: 0px;
   padding: 0px;
   display: flex;
+  flex-direction: column;
   gap: 30px;
   margin: 0px auto;
+  border: 1px solid black;
+  border-radius: 10px;
 }
 
 
