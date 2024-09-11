@@ -1,5 +1,9 @@
 import { useState } from 'react'
 import General from './General'
+import envelope from '../assets/icons8-email.png'
+import cellPhone from '../assets/icons8-phone.png'
+import location from '../assets/icons8-address.png'
+import chainLink from '../assets/icons8-link.png'
 import '../styles/App.css'
 
 function App() {
@@ -28,16 +32,7 @@ function App() {
       handleLinkChange={setLink}
       />
 
-      <div className='cv'>
-        <h1>{name}</h1>
-        <h2>{position}</h2>
-        <div>
-          <p>{email}</p>
-          <p>{phone}</p>
-          <p>{address}</p>
-          <a href={`https://www.${link}`} target="_blank">{link}</a>
-        </div>
-      </div>
+    
     </>
   )
 }
