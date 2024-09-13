@@ -128,7 +128,7 @@ h1{
 
 .divider {
     width: 107%;
-    top: 75px;
+    top: 50px;
     margin-top: -10px;
     grid-column: -1 /1;
     background-color: #303D50;

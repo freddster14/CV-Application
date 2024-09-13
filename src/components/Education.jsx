@@ -2,10 +2,7 @@ import {Fragment, useState} from 'react';
 import '../styles/Education.css'
 
 
-function Education (
-    
-) 
-{
+function Education () {
     const [components, setComponents] = useState([
         <MakeEducation
         defaultMajor="Computer Science"
@@ -94,10 +91,10 @@ function deleteForm(e) {
 }
 
 function Input({name, value, handleChange})  {
-    const [inputWidth, setInputWidth] = useState(value.length + 1);
+    const [inputWidth, setInputWidth] = useState(value.length);
     const handleInput = (e, handleChange) => {
         handleChange(e.target.value);
-        setInputWidth(e.target.value.length)
+        setInputWidth(  name==="Major" ? e.target.value.length + 1 : e.target.value.length)
     };
 
     return (

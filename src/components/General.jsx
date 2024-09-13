@@ -79,7 +79,7 @@ function Input({name, value, handleChange, type, index}) {
     
     const handleInput = (e) => {
         handleChange(e.target.value)
-        setInputWidth(e.target.value.length + 1)
+        setInputWidth(name==="email" ? e.target.value.length + 2 : e.target.value.length + 1)
     };
 
     if(index > 2) {
