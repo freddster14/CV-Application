@@ -10,14 +10,21 @@
     font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
     font-weight: bold;
     margin: 0px;
-    border: none;
+    padding: 3px;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    outline: none;
+}
+
+.general input:focus, .general input:hover {
+    border: 2px solid black;
 }
 
 input.name {
     font-size: 2.5em;
     margin-left: 25px;
     margin-top: 7px;
-    margin-bottom: -5px;
+    margin-bottom: -10px;
 }
 
 input.position {
@@ -57,7 +64,7 @@ input.position {
 }
 
 .general-info-box div {
-    
+
     color: white;
     display: flex;
     align-items: center;

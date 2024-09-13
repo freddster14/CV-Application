@@ -1,64 +1,96 @@
-import {useState} from 'react';
+import {Fragment, useState} from 'react';
 import '../styles/Education.css'
 
 
-function Education ({
-    school,
-    handleSchoolChange,
-    major,
-    handleMajorChange,
-    graduation,
-    handleGraduationChange,
-    degree,
-    handleDegreeChange
-}) 
+function Education (
+    
+) 
 {
-
-    const options = [
-        "High School Diploma",
-        "Associate",
-        "Bachelor's",
-        "Master's",
-        "Doctoral",
-    ];
-
-    const fields = [
-        {label: 'Major', value: major, handleChange: handleMajorChange},
-        {label: 'School', value: school, handleChange: handleSchoolChange},
-        {label: 'Graduation', value: graduation, handleChange: handleGraduationChange},
-    ]
+    const [components, setComponents] = useState([
+        <MakeEducation
+        defaultMajor="Computer Science"
+        defaultSchool="Rice University"
+        defaultGraduation="2020 - 2024"
+        />
+    ])
+    
+    const addInputs = (e) => {
+        setComponents([...components, 
+            <MakeEducation
+            defaultMajor="Computer Science"
+            defaultSchool="Rice University"
+            defaultGraduation="2020 - 2024"
+            />])
+        
+    }
 
     return (
         <div className='education-container'>
             <div className='education-header'>
                 <h1>Education</h1>
-                <button onClick={EditEducation}>Remove Education</button>
+                <button onClick={addInputs}>+</button>
             </div>
-            <div className='education-form'>
-                <select className='degree-select' value={degree} onChange={(e) => handleDegreeChange(e.target.value)}>
-                    <option >Choose A Degree</option>
-                    {options.map((option) => (
-                        <option key={option} value={option}>{option} -</option>
-                    ))}
-                </select>
-                {fields.map(({label, value, handleChange}) => (
-                    <Input
-                    key={label}
-                    name={label}
-                    value={value}
-                    handleChange={handleChange}
-                    />
-                ))}
-                
-            </div>
+            
+            {components.map((components, index) => (
+                <Fragment key={index}>
+                {components}
+                </Fragment>
+            ))}
+            <div className='divider'></div>                
+            
                
         </div>
     )
 }
 
 
-function EditEducation() {
 
+
+function MakeEducation({
+    defaultMajor,
+    defaultSchool,
+    defaultGraduation,
+})
+
+{
+    const [degree, setDegree] = useState(undefined);
+    const [school, setSchool] = useState(defaultSchool);
+    const [major, setMajor] = useState(defaultMajor);
+    const [graduationDate, setGraduationDate] = useState(defaultGraduation); 
+    const options = [
+        "Associate",
+        "Bachelor's",
+        "Master's",
+        "Doctoral",
+    ];
+    const fields = [
+        {label: 'Major', value: major, handleChange: setMajor},
+        {label: 'School', value: school, handleChange: setSchool},
+        {label: 'Graduation', value: graduationDate, handleChange: setGraduationDate},
+    ]
+    return (
+    <div className='education-forms'>
+        <select className='degree-select' value={degree} onChange={(e) => setDegree(e.target.value)}>
+            {options.map((option) => (
+                <option key={option} value={option}>{option} -</option>
+            ))}
+        </select>
+        {fields.map(({label, value, handleChange}) => (
+            <Input
+            key={label}
+            name={label}
+            value={value}
+            handleChange={handleChange}
+            />
+        ))}
+        <button className='delete-education-form' onClick={deleteForm}>Delete</button>
+    </div>
+    )
+   
+}
+
+function deleteForm(e) {
+    e.target.parentNode.remove()
 }
 
 function Input({name, value, handleChange})  {
@@ -68,16 +100,18 @@ function Input({name, value, handleChange})  {
         setInputWidth(e.target.value.length)
     };
 
- 
-
     return (
-        <input 
-            type="text" 
-            className={name.toLowerCase()}
-            value={value}
-            style={{width: inputWidth + "ch"}}
-            onChange={(e) => handleInput(e, handleChange)}
-        />
+        <>
+            <input 
+                type="text" 
+                className={name.toLowerCase()}
+                value={value}
+                style={{width: inputWidth + "ch"}}
+                onChange={(e) => handleInput(e, handleChange)}
+            />
+            {name === "School" && <div className='education-divider'></div>}
+        </>
+        
     )
 }
 
