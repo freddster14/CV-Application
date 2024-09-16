@@ -1,56 +1,5 @@
 .education-container {
-    margin-top: 20px;
     padding: 20px 55px;
-}
-
-h1{
-    font-size: 2.4em;
-    margin-bottom: 20px;
-}
-
-
-
-.education-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.education-header button {
-    width: 42px;
-    height: 42px;
-    border-radius: 50%;
-    background-color: #303D50;
-    color: white;
-    font-size: 2.2em;
-    border: none;
-    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.658);
-    transition: transform 0.25s linear 0.1s;
-}
-
-.education-header button:hover, .education-header button:focus {
-    transform: scale(1.2);
-
-}
-
-.education-forms {
-    display: grid;
-    grid-template-columns: auto 3px 1fr 43px;
-    align-items: center;
-    justify-content: start;
-    margin-bottom: 20px;
-}
-
-.education-forms input {
-    min-width: 65px;
-    border:  2px solid transparent;
-    padding: 3px;
-    font-weight: bold;
-    outline: none;
-}
-
-.education-forms input:hover, .education-forms input:focus {
-    border: 2px solid black;
 }
 
 .degree-select {
@@ -103,31 +52,11 @@ h1{
     grid-column: 2;
 }
 
-.delete-education-form{
-    grid-row: 2;
-    grid-column: -1;
-    width: 42px;
-    height: 42px;
-    background-image: url('../assets/icons8-delete.png');
-    background-size: 65%;
-    background-position: 50%;
-    background-repeat: no-repeat;
-    border-radius: 50%;
-    background-color: #b82929;
-    color: transparent;
-    font-size: 2.2em;
-    border: none;
-    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.658);
-    transition: transform 0.25s linear 0.1s;
-}
 
-.delete-education-form:hover, .delete-education-form:focus {
-    transform: scale(1.2);
 
-}
 
 .divider {
-    width: 107%;
+    width: 104.5%;
     top: 50px;
     margin-top: -10px;
     grid-column: -1 /1;

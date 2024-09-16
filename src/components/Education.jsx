@@ -23,9 +23,9 @@ function Education () {
 
     return (
         <div className='education-container'>
-            <div className='education-header'>
+            <div className='header'>
                 <h1>Education</h1>
-                <button onClick={addInputs}>+</button>
+                <button className='header-button' onClick={addInputs}>+</button>
             </div>
             
             {components.map((components, index) => (
@@ -66,7 +66,7 @@ function MakeEducation({
         {label: 'Graduation', value: graduationDate, handleChange: setGraduationDate},
     ]
     return (
-    <div className='education-forms'>
+    <div className='forms'>
         <select className='degree-select' value={degree} onChange={(e) => setDegree(e.target.value)}>
             {options.map((option) => (
                 <option key={option} value={option}>{option} -</option>
@@ -80,7 +80,7 @@ function MakeEducation({
             handleChange={handleChange}
             />
         ))}
-        <button className='delete-education-form' onClick={deleteForm}>Delete</button>
+        <button className='delete-form' onClick={deleteForm}>Delete</button>
     </div>
     )
    

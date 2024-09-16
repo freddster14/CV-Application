@@ -8,6 +8,13 @@ function Experience () {
         defaultTitle="Product Engineer"
         defaultDate="2023 - Current"
         defaultRole="Full-Stack & Mobile Engineer"
+        defaultTasks={
+            [
+                "Create React UI components for mobile ",
+                "Manage databases with Odoo",
+                "Troubleshoot and debug"
+            ]
+        }
         />
     ])
     
@@ -18,15 +25,22 @@ function Experience () {
             defaultTitle="Product Engineer"
             defaultDate="2023 - Current"
             defaultRole="Full-Stack & Mobile Engineer"
+            defaultTasks={
+                [
+                   "Create React UI components for mobile ",
+                    "Manage databases with Odoo",
+                    "Troubleshoot and debug"
+                ]
+            }
             />])
         
     }
 
     return (
         <div className='experience-container'>
-            <div className='experience-header'>
+            <div className='header'>
                 <h1>Experience</h1>
-                <button onClick={addInputs}>+</button>
+                <button className='header-button' onClick={addInputs}>+</button>
             </div>
             
             {components.map((components, index) => (
@@ -49,6 +63,7 @@ function MakeExperience({
     defaultTitle,
     defaultDate,
     defaultRole,
+    defaultTasks,
 })
 
 {
@@ -56,6 +71,7 @@ function MakeExperience({
     const [title, setTitle] = useState(defaultTitle);
     const [company, setCompany] = useState(defaultCompany);
     const [date, setDate] = useState(defaultDate); 
+    const [tasks, setTask] = useState(defaultTasks)
   
     const fields = [
         {label: 'Title', value: title, handleChange: setTitle},
@@ -63,8 +79,15 @@ function MakeExperience({
         {label: 'Company', value: company, handleChange: setCompany},
         {label: 'Date', value: date, handleChange: setDate},
     ]
+
+    function handleTasks(e, value) {
+        let index = tasks.indexOf(value)
+        let newItem = [...tasks]
+        newItem[index] = e
+        setTask(newItem)
+    }
     return (
-    <div className='experience-forms'>
+    <div className='forms'>
         
         {fields.map(({label, value, handleChange}) => (
             <Input
@@ -74,7 +97,19 @@ function MakeExperience({
             handleChange={handleChange}
             />
         ))}
-        <button className='delete-experience-form' onClick={deleteForm}>Delete</button>
+        <ul className='job-tasks'>
+            {tasks.map((task, index) => (
+                <Fragment key={index}>
+                    <div className=''></div>
+                    <Input 
+                    name="task"
+                    value={task}
+                    handleChange={handleTasks}
+                    />
+                </Fragment>
+            ))}
+        </ul>
+        <button className='delete-form' onClick={deleteForm}>Delete</button>
     </div>
     )
    
@@ -87,7 +122,7 @@ function deleteForm(e) {
 function Input({name, value, handleChange})  {
     const [inputWidth, setInputWidth] = useState(value.length);
     const handleInput = (e, handleChange) => {
-        handleChange(e.target.value);
+        name === "task" ? handleChange(e.target.value, value) : handleChange(e.target.value);
         setInputWidth(name ==="Title" ? e.target.value.length + 1 : e.target.value.length)
     };
 
