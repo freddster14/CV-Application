@@ -32,10 +32,7 @@ function Education () {
                 <Fragment key={index}>
                 {components}
                 </Fragment>
-            ))}
-            <div className='divider'></div>                
-            
-               
+            ))}     
         </div>
     )
 }

@@ -1,5 +1,6 @@
 #root {
-  max-width: 1200px;
+  max-width: 1000px;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   width: 90%;
   justify-content: space-between;
   margin: 0px;
@@ -10,6 +11,7 @@
   margin: 0px auto;
   border: 1px solid black;
   border-radius: 10px;
+  background-color: white;
 }
 
 .header {
@@ -20,28 +22,35 @@
 
 h1{
   font-size: 2.4em;
-  margin-bottom: 20px;
+  margin: 15px 0px;
 }
 
+p{ 
+  margin: 0px;
+  font-family: inherit;
+}
 .header button {
-  font-size: 2.2em;
+  font-size: 2.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 
 .forms {
   display: grid;
-  grid-template-columns: auto 3px 1fr 43px;
+  grid-template-columns: auto 13px 1fr 43px;
   align-items: center;
   justify-content: start;
   margin-bottom: 20px;
 }
 
-.forms input {
+.title, .role, .company, .date, .task, .major, .school, .graduation  {
   min-width: 65px;
   border:  2px solid transparent;
-  padding: 3px;
   font-weight: bold;
   outline: none;
+  font-family: inherit;
 }
 
 .forms input:hover, .forms input:focus {
@@ -62,7 +71,7 @@ h1{
   transition: transform 0.25s linear 0.1s;
 }
 
-.header-button:hover, .header-button:focus {
+button:hover, button:focus {
   transform: scale(1.2);
 
 }
@@ -74,7 +83,6 @@ h1{
   width: 42px;
   height: 42px;
   background-image: url('../assets/icons8-delete.png');
-  background-size: 65%;
   background-position: 50%;
   background-repeat: no-repeat;
   border-radius: 50%;
@@ -86,10 +94,5 @@ h1{
   transition: transform 0.25s linear 0.1s;
 }
 
-
-.delete-form:hover, .delete-form:focus {
-  transform: scale(1.2);
-
-}
 
 

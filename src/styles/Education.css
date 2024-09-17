@@ -1,9 +1,11 @@
 .education-container {
     padding: 20px 55px;
+    margin-bottom: 25px;
 }
 
 .degree-select {
     appearance: none;
+    font-family: inherit;
     grid-column: 1 / -1;
     background-color: transparent;
     color: #213547;
@@ -11,7 +13,7 @@
     width: fit-content;
     border: 1px solid transparent;
     font-weight: bold;
-    padding: 3px 8px;
+    padding: 0px 5px;
 }
 
 .degree-select:focus, .degree-select:hover {
@@ -22,6 +24,7 @@
 .degree-select option {
     background-color:  #213547;
     color: white;
+    font-family: inherit;
     border-radius: 10px;
 }
 
@@ -30,34 +33,31 @@
     font-size: 1.5em;
     margin-left: 3px;
     color: inherit;
+    font-family: inherit;
 }
 
 .school, .graduation {
     grid-row: 3;
     margin-left: 4px;
     font-size: 1em;
-    color: #4C9599;   
+    color: #4C9599;
+    font-family: inherit;
 }
 
-.graduation {
-    margin-left: 8px;
-}
 
 .education-divider{
     height: 18px;
     width: 3px;
+    margin: 0px 5px;
     background-color: #213547;
     position: relative;
     grid-row: 3;
     grid-column: 2;
 }
 
-
-
-
 .divider {
     width: 104.5%;
-    top: 50px;
+    top: 28px;
     margin-top: -10px;
     grid-column: -1 /1;
     background-color: #303D50;

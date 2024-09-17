@@ -2,10 +2,6 @@ import { useState } from 'react'
 import General from './General'
 import Education from './Education'
 import Experience from './Experience'
-import envelope from '../assets/icons8-email.png'
-import cellPhone from '../assets/icons8-phone.png'
-import location from '../assets/icons8-address.png'
-import chainLink from '../assets/icons8-link.png'
 import '../styles/App.css'
 
 function App() {
