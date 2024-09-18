@@ -31,7 +31,7 @@
     grid-row: 3;
     margin-left: 6px;
     font-size: 1em;
-    color: #4C9599;   
+    color: #67acc7;   
 }
 
 .graduation {
@@ -51,7 +51,7 @@
     color: inherit;
     font-weight: bold;
     font-size: 1em;
-    margin-bottom: 4px;
+    margin-bottom: 2px;
 }
 
 .job-tasks div {
@@ -85,7 +85,7 @@
     bottom: 22px;
     margin-top: -10px;
     grid-column: -1 /1;
-    background-color: #303D50;
+    background-color: #213547;
     height: 10px;
     left: 50%;
     transform: translateX(-50%);
@@ -98,7 +98,7 @@
     top: 28px;
     margin-top: -10px;
     grid-column: -1 /1;
-    background-color: #303D50;
+    background-color: #213547;
     height: 10px;
     left: 50%;
     transform: translateX(-50%);

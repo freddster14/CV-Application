@@ -3,13 +3,11 @@
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   width: 90%;
   justify-content: space-between;
-  margin: 0px;
-  padding: 0px;
   display: flex;
   flex-direction: column;
   gap: 30px;
   font-size: 0.9em;
-  margin: 0px auto;
+  margin: 100px auto 0px auto;
   border: 1px solid black;
   border-radius: 10px;
   background-color: white;
@@ -66,7 +64,7 @@ p{
   width: 42px;
   height: 42px;
   border-radius: 50%;
-  background-color: #303D50;
+  background-color: #213547;
   color: white;
   border: none;
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.658);
@@ -88,7 +86,7 @@ button:hover, button:focus {
   background-position: 50%;
   background-repeat: no-repeat;
   border-radius: 50%;
-  background-color: #b82929;
+  background-color: #BB2649;
   color: transparent;
   border: none;
   position: relative;

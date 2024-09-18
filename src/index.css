@@ -1,7 +1,7 @@
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   color-scheme: light dark;
-  color: #213547;
+  color: #303D50;
   background-color: #213547;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -16,7 +16,7 @@
   left: 74.5%;
   border-radius: 10px;
   border: 2px solid black;
-  top: 55px;
+  top: 150px;
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.548);
   transform: scale(1.1);
   transition: transform 0.25s linear 0.1s;
