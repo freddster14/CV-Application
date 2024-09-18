@@ -8,6 +8,7 @@
   display: flex;
   flex-direction: column;
   gap: 30px;
+  font-size: 0.9em;
   margin: 0px auto;
   border: 1px solid black;
   border-radius: 10px;
@@ -22,7 +23,8 @@
 
 h1{
   font-size: 2.4em;
-  margin: 15px 0px;
+  margin: 10px 0px;
+  font-style: italic;
 }
 
 p{ 
@@ -96,3 +98,92 @@ button:hover, button:focus {
 
 
 
+
+
+@media screen and (max-width:750px) {
+  #root {
+    font-size: 0.7em;
+    width: 100%;
+  }
+  .general-info-box {
+    grid-template-columns: repeat(auto-fit, minmax(45%, 1fr));
+    column-gap: 38px;
+    padding: 15px 10px;
+  }
+  .general-info-box img {
+    width: 28px;
+  }
+
+  .general-info-box div {
+    gap: 7px;
+  }
+
+  div.link img {
+    width: 24px;
+  }
+
+  .header button, .delete-form {
+    width: 34px;
+    height: 34px;
+    background-size: 75%;
+  }
+  .experience-divider, .education-divider {
+    height: 12px;
+    width: 2px;
+    margin: 0px 4px;
+  }
+
+  .job-tasks div {
+    width: 5px;
+    height: 5px;
+    top: 14px;
+    right: 9px;
+  }
+ 
+}
+
+@media screen and (max-width:500px) {
+  #root {
+    font-size: 0.6em;
+  }
+  .general-info-box {
+    grid-template-columns: repeat(auto-fit, minmax(45%, 1fr));
+    column-gap: 30px;
+    padding: 15px 10px;
+  }
+  .general-info-box img {
+    width: 24px;
+  }
+
+  .general-info-box div {
+    gap: 3px;
+  }
+  div.link img {
+    width: 20px;
+  }
+  .experience-container, .general, .education-container {
+    padding: 15px 30px;
+  }
+
+  .experience-container {
+    padding-bottom: 0px;
+  }
+
+  .header button, .delete-form {
+    width: 28px;
+    height: 28px;
+    background-size: 75%;
+  }
+  .experience-divider, .education-divider {
+    height: 12px;
+    width: 2px;
+    margin: 0px 4px;
+  }
+
+  .job-tasks div {
+    width: 4px;
+    height: 4px;
+    top: 12px;
+    right: 8px;
+  }
+}

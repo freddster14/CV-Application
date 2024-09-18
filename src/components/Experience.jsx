@@ -38,6 +38,7 @@ function Experience () {
 
     return (
         <div className='experience-container'>
+            <div className='top-divider'></div>
             <div className='header'>
                 <h1>Experience</h1>
                 <button className='header-button' onClick={addInputs}>+</button>
@@ -48,7 +49,7 @@ function Experience () {
                 {components}
                 </Fragment>
             ))}
-            <div className='divider'></div>                
+            <div className='bottom-divider'></div>                
             
                
         </div>
