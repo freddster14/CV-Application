@@ -1,5 +1,5 @@
 # CV/Resume Application
-Live Preview: [Click Here] (https://cv-application-alpha-one.vercel.app/)
+Live Preview: [Click Here](https://cv-application-alpha-one.vercel.app/)
 
 ## Technologies Used
 
