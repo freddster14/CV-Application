@@ -61,7 +61,7 @@ p{
   font-family: inherit;
 }
 
-.forms input:hover, .forms input:focus {
+.app input:hover, .app input:focus {
   border: 2px solid black;
 }
 

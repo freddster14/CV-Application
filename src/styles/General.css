@@ -1,9 +1,3 @@
-.general {
-    display: flex;
-    flex-direction: column; 
-    padding: 20px 40px;
-    gap: 10px;
-}
 
 .name, .position, .email, .phone, .address, .link {
     color: inherit;
