@@ -31,7 +31,7 @@ function General({
     let index = 0;
 
     return (
-        <div className='general'>
+        <>
             {fields.map(({label, value, handleChange, type}) => {
                 index++
 
@@ -68,7 +68,7 @@ function General({
                 
             })}
             
-        </div>
+        </>
  )
 }
 

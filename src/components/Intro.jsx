@@ -15,7 +15,7 @@ export default function Intro() {
         } else if(width < 751) {
             appName.style.transform = "translate(-50%, 520%) scale(2)"
         } else{
-            appName.style.transform = "translate(-50%, 320%) scale(2)"
+            appName.style.transform = "translate(-50%, 290%) scale(1.9)"
         }
     },100)
     return (

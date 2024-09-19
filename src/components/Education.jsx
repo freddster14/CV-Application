@@ -22,7 +22,8 @@ function Education () {
     }
 
     return (
-        <div className='education-container'>
+        <>
+            <div className='bottom-divider'></div>                
             <div className='header'>
                 <h1>Education</h1>
                 <button className='header-button' onClick={addInputs}>+</button>
@@ -33,7 +34,7 @@ function Education () {
                 {components}
                 </Fragment>
             ))}     
-        </div>
+        </>
     )
 }
 

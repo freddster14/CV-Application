@@ -37,7 +37,7 @@ function Experience () {
     }
 
     return (
-        <div className='experience-container'>
+        <>
             <div className='top-divider'></div>
             <div className='header'>
                 <h1>Experience</h1>
@@ -49,10 +49,9 @@ function Experience () {
                 {components}
                 </Fragment>
             ))}
-            <div className='bottom-divider'></div>                
             
                
-        </div>
+        </>
     )
 }
 

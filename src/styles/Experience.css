@@ -77,21 +77,10 @@
 }
 
 .top-divider, .bottom-divider{
-    width: 102.5%;
-    margin: 18px 0px;
+    width: 100%;
+    margin: 15px 0px;
     background-color: #213547;
-    height: 10px;
+    height: 8px;
     left: 50%;
-    transform: translateX(-50%);
     border-radius: 20px;
-    position: relative;
-}
-
-.top-divider {
-    bottom: 8px;
-}
-
-.bottom-divider {
-    top: 20px;
-    margin: 28px 0px;    
 }

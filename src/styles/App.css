@@ -6,11 +6,19 @@
   display: flex;
   flex-direction: column;
   gap: 30px;
-  font-size: 0.9em;
+  font-size: 0.95em;
   margin: 100px auto 0px auto;
   border: 1px solid black;
   border-radius: 10px;
   background-color: white;
+}
+
+
+.app {
+  padding: 10px 50px 20px 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .header {
@@ -21,7 +29,7 @@
 
 h1{
   font-size: 2.4em;
-  margin: 10px 0px;
+  margin: 3px 0px;
   font-style: italic;
 }
 
@@ -42,7 +50,7 @@ p{
   grid-template-columns: auto 13px 1fr 43px;
   align-items: center;
   justify-content: start;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .title, .role, .company, .date, .task, .major, .school, .graduation  {

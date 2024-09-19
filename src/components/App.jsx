@@ -40,7 +40,7 @@ function App() {
 
 function printPdf() {
   
-  let app = document.getElementsByClassName('app');
+  let app = document.querySelector('.app');
   let buttons = document.querySelectorAll('button');
   let inputs = document.querySelectorAll('input');
   let selects = document.querySelectorAll('select');
@@ -55,13 +55,15 @@ function printPdf() {
     pagebreak: {mode: 'avoid-all'}
   };
 
+
   removeInputs(selects, link, buttons, inputs)
   
   //Download PDF
-  html2pdf().set(options).from(...app).save();
+  html2pdf().set(options).from(app).save();
 
   setTimeout(() => {  
-    addInputs(selects, link, buttons, inputs)
+    addInputs(selects, link, buttons, inputs);
+
   }, 100)
 }
 
@@ -94,17 +96,18 @@ function removeInputs(selects, link, buttons, inputs) {
 }
 
 function addInputs(selects, link, buttons, inputs) {
-
+  let count = 0;
   link.parentNode.replaceChild(inputs[5], link)
-  let selectP = document.getElementsByClassName('degree-select');
-  selectP.forEach((select, index) => {
-    select.parentNode.replaceChild(selects[index], select)
-  });
   let allP = document.querySelectorAll("p");
   allP.forEach((p, index) => {
-      if(index >= 5) index++;
-      p.parentNode.replaceChild(inputs[index], p)
-    
+      if(index >= 5) index++ 
+      if(p.className === 'degree-select') {
+        p.parentNode.replaceChild(selects[count], p)
+        count += 1
+      } else {
+        p.parentNode.replaceChild(inputs[index - count], p)
+      }
+    if(allP.length === index) return;
   })
   buttons.forEach(button => {
     button.style.opacity = "100%"
