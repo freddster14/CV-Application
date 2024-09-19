@@ -15,7 +15,7 @@ function App() {
   
 
   return (
-    <>
+    <div className='app'>
       <button className='pdf-button' onClick={printPdf}>PDF</button>
       <General
       name={name} 
@@ -33,20 +33,19 @@ function App() {
       />
       <Experience/>
       <Education/>
-    </>
+    </div>
   )
 }
 
 
 function printPdf() {
   
-  let page = document.getElementById('root');
+  let app = document.getElementsByClassName('app');
   let buttons = document.querySelectorAll('button');
   let inputs = document.querySelectorAll('input');
   let selects = document.querySelectorAll('select');
   let link = document.createElement('a')
   let name = document.querySelector(".name").value
-
   const options = {
     filename:  name + ' Resume.pdf',
     image: { type: 'jpeg', quality: 0.98 },
@@ -56,18 +55,18 @@ function printPdf() {
     pagebreak: {mode: 'avoid-all'}
   };
 
-  removeInputs(selects, link, buttons, page, inputs)
+  removeInputs(selects, link, buttons, inputs)
   
   //Download PDF
-  html2pdf().set(options).from(page).save();
+  html2pdf().set(options).from(...app).save();
 
   setTimeout(() => {  
-    addInputs(selects, link, buttons, page, inputs)
+    addInputs(selects, link, buttons, inputs)
   }, 100)
 }
 
 
-function removeInputs(selects, link, buttons, page, inputs) {
+function removeInputs(selects, link, buttons, inputs) {
   selects.forEach(select => {
     let selectP = document.createElement('p');
     selectP.textContent = select.value
@@ -92,10 +91,9 @@ function removeInputs(selects, link, buttons, page, inputs) {
   buttons.forEach(button => {
     button.style.opacity = "0%"
   })
-  page.style.border = "none"
 }
 
-function addInputs(selects, link, buttons, page, inputs) {
+function addInputs(selects, link, buttons, inputs) {
 
   link.parentNode.replaceChild(inputs[5], link)
   let selectP = document.getElementsByClassName('degree-select');
@@ -111,7 +109,6 @@ function addInputs(selects, link, buttons, page, inputs) {
   buttons.forEach(button => {
     button.style.opacity = "100%"
   })
-  page.style.border = "1px solid black"
 }
 
 

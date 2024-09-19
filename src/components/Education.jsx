@@ -52,10 +52,10 @@ function MakeEducation({
     const [major, setMajor] = useState(defaultMajor);
     const [graduationDate, setGraduationDate] = useState(defaultGraduation); 
     const options = [
-        "Associate",
-        "Bachelor's",
-        "Master's",
-        "Doctoral",
+        "Associate -",
+        "Bachelor's -",
+        "Master's -",
+        "Doctoral -",
     ];
     const fields = [
         {label: 'Major', value: major, handleChange: setMajor},
@@ -66,7 +66,7 @@ function MakeEducation({
     <div className='forms'>
         <select className='degree-select' value={degree} onChange={(e) => setDegree(e.target.value)}>
             {options.map((option) => (
-                <option key={option} value={option}>{option} -</option>
+                <option key={option} value={option}>{option}</option>
             ))}
         </select>
         {fields.map(({label, value, handleChange}) => (

@@ -101,7 +101,7 @@ function MakeExperience({
         <ul className='job-tasks'>
             {tasks.map((task, index) => (
                 <Fragment key={index}>
-                    <div className=''></div>
+                    <div></div>
                     <Input 
                     name="task"
                     value={task}

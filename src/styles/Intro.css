@@ -3,9 +3,82 @@ h1.app-name {
     position: absolute;
     left: 50%;
     top: 0.75%;
+    z-index: 2;
+    transform: translate(-50%, 0%) scale(1);
     background: linear-gradient(#ffffff 40%, #002d55 100% );
     -webkit-background-clip: text;
     color: transparent;
-    transform: translateX(-50%);
+    transition: transform 0.4s ease-in-out;
 }
 
+
+
+.modal-container {
+    position: absolute;
+    z-index: 1;
+    background-color: rgb(255, 255, 255);
+    width: 80%;
+    max-width: 500px;
+    font-size: 1.4em;
+    padding: 15px 25px 25px 25px;
+    justify-content: center;
+    left: 50%;
+    top: 40%;
+    border: 7px solid #213547;
+    border-radius: 15px;
+    transform: translate(-50%, -40%);
+    animation: modal 0.5s ease-in-out alternate;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.modal-backdrop {
+    content: '';
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.795);
+    width: 100vw;
+    height: 100vh;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+}
+
+
+
+.close-modal {
+    width: 42px;
+    height: 42px;
+    border: none;
+    border-radius: 50px;
+    background-color: #213547;
+    margin-top: 20px;
+    color: white;
+    font-size: 1.8em;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.658);
+    transition: transform 0.25s linear 0.1s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.span-text {
+    font-size: 1.1em;
+    font-weight: bold;
+    text-decoration: underline;
+    margin-right: 4px;
+}
+
+
+
+@keyframes modal {
+    from{
+        transform: translate(-50%, -100%);
+        opacity: 0%;
+    }
+    to {
+        transform: translate(-50%, -40%);
+    }
+}
