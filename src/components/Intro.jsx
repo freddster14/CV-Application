@@ -5,17 +5,15 @@ export default function Intro() {
     function closeModal() {
         document.querySelector('.modal-container').remove()
         document.querySelector('.modal-backdrop').remove()
-        document.querySelector('.app-name').style.transform = "translate(-50%, 0%) scale(1)"
+        document.querySelector('.app-name').style.transform = "translate(-50%, 10%) scale(1)"
     }
     setTimeout(() => {
         let appName = document.querySelector('.app-name')
         let width = window.innerWidth
-        if(width < 501) {
-            appName.style.transform = "translate(-50%, 655%) scale(1.8)"
-        } else if(width < 751) {
-            appName.style.transform = "translate(-50%, 520%) scale(2)"
+        if(width < 751) {
+            appName.style.transform = "translate(-50%, 440%) scale(2)"
         } else{
-            appName.style.transform = "translate(-50%, 290%) scale(1.9)"
+            appName.style.transform = "translate(-50%, 340%) scale(1.9)"
         }
     },100)
     return (
@@ -28,8 +26,8 @@ export default function Intro() {
                     Start by <span className="span-text">editing</span>
                     the text, <span className="span-text">add</span>or
                     <span className="span-text"> delete</span>
-                    the sections with buttons. Enter simple link as shown
-                    in the example. When you're done, press 
+                    the sections with buttons. Enter full link 
+                    PDF will automatically organize it. When you're done, press 
                     <span className="span-text"> PDF</span>to download your resume.
                 </p>
                 <button onClick={closeModal} className='close-modal' aria-label='Close Modal'>&times;</button>

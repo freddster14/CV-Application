@@ -1,8 +1,3 @@
-.education-container {
-    padding: 20px 55px;
-    margin-bottom: 25px;
-}
-
 
 .degree-select {
     appearance: none;
@@ -15,6 +10,7 @@
     border: 1px solid transparent;
     font-weight: bold;
     padding: 0px 5px;
+    margin-left: 3px;
 }
 
 .degree-select:focus, .degree-select:hover {
@@ -32,14 +28,14 @@
 .major{
     grid-column: 1 / -1;
     font-size: 1.5em;
-    margin-left: 3px;
+    margin-left: 4px;
     color: inherit;
     font-family: inherit;
 }
 
 .school, .graduation {
     grid-row: 3;
-    margin-left: 4px;
+    margin-left: 5px;
     font-size: 1em;
     color: #67acc7;
     font-family: inherit;

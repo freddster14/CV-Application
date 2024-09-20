@@ -16,28 +16,29 @@
 
 .name {
     font-size: 2.5em;
-    margin-left: 25px;
-    margin-top: 7px;
+    margin-top: 10px;
     margin-bottom: -10px;
+    padding: 0px 3px;
 }
 
 .position {
-    margin-left: 25px;
-    margin-bottom: 10px;
     font-size: 1.5em;
+    margin-bottom: 8px;
+    padding: 0px 3px;
+
     color: #67acc7;
 }
 
 
 .general-info-box {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(33%, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(40%, 1fr));
     grid-template-rows: 1fr 1fr;
     justify-content: space-between;
     align-items: center;
     gap: 10px;
     border-radius: 15px;
-    column-gap: min(150px, 100%);
+    column-gap: min(100px, 100%);
     background-color: #213547;
     padding: 10px 30px;
     margin-bottom: 5px;

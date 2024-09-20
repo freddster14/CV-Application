@@ -1,6 +1,5 @@
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  color-scheme: light dark;
   color: #303D50;
   background-color: #213547;
   font-synthesis: none;
@@ -13,7 +12,7 @@
 
 .pdf-button {
   position: absolute;
-  left: 74.5%;
+  left: 75%;
   border-radius: 10px;
   border: 2px solid black;
   top: 150px;

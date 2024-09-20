@@ -11,7 +11,7 @@ function App() {
   const [email, setEmail] = useState("JohnDoe123@gmail.com");
   const [phone, setPhone] = useState("(123) 456-7890");
   const [address, setAddress] = useState("Houston, TX");
-  const [link, setLink] = useState("google.com");
+  const [link, setLink] = useState("https://www.google.com/");
   
 
   return (
@@ -47,6 +47,7 @@ function printPdf() {
   let link = document.createElement('a')
   let name = document.querySelector(".name").value
   const options = {
+    margin: [0.3, 0.2],
     filename:  name + ' Resume.pdf',
     image: { type: 'jpeg', quality: 0.98 },
     html2canvas: { scale: 2, windowWidth: '1000px' },
@@ -55,7 +56,7 @@ function printPdf() {
     pagebreak: {mode: 'avoid-all'}
   };
 
-
+  app.style.fontSize = '0.9em'
   removeInputs(selects, link, buttons, inputs)
   
   //Download PDF
@@ -82,9 +83,13 @@ function removeInputs(selects, link, buttons, inputs) {
     newP.textContent = input.value
     newP.classList.add(input.className)
     if(input.className === "link") {
-      link.textContent =   input.value
+      link.href = input.value
+      //Short link text
+      let e = input.value;
+      (e.indexOf('w') === 8) ? e = e.slice(12) : e = e.slice(8)
+      let cut = e.indexOf("/")
+      link.textContent = e.slice(0 , cut--)
       link.classList.add(input.className)
-      link.href = "https://www." + input.value
       input.parentNode.replaceChild(link, input)
     } else {
       input.parentNode.replaceChild(newP, input)
@@ -100,14 +105,19 @@ function addInputs(selects, link, buttons, inputs) {
   link.parentNode.replaceChild(inputs[5], link)
   let allP = document.querySelectorAll("p");
   allP.forEach((p, index) => {
-      if(index >= 5) index++ 
-      if(p.className === 'degree-select') {
-        p.parentNode.replaceChild(selects[count], p)
-        count += 1
-      } else {
-        p.parentNode.replaceChild(inputs[index - count], p)
-      }
-    if(allP.length === index) return;
+    if(inputs[index - count] === undefined) {
+      console.log(inputs[index - count])
+      console.log("ran")
+      return
+    }
+    if(index >= 5) index++ 
+    if(p.className === 'degree-select') {
+      p.parentNode.replaceChild(selects[count], p)
+      count += 1
+    } else {
+      //console.log(inputs[index-count], p, index, inputs.length)
+      p.parentNode.replaceChild(inputs[index - count], p)
+    }
   })
   buttons.forEach(button => {
     button.style.opacity = "100%"

@@ -80,6 +80,8 @@ function MakeExperience({
         {label: 'Date', value: date, handleChange: setDate},
     ]
 
+    const boxFields = [fields[0], fields[1]]
+
     function handleTasks(e, value) {
         let index = tasks.indexOf(value)
         let newItem = [...tasks]
@@ -88,15 +90,35 @@ function MakeExperience({
     }
     return (
     <div className='forms'>
-        
-        {fields.map(({label, value, handleChange}) => (
-            <Input
-            key={label}
-            name={label}
-            value={value}
-            handleChange={handleChange}
-            />
-        ))}
+        {fields.map(({label, value, handleChange}) => {
+            if(label === "Role"){
+                return (
+                    <div key='job' className='job'  >
+                        {boxFields.map(({label, value, handleChange}) => (
+                            <Fragment key={label}>
+                                <Input
+                                name={label}
+                                value={value}
+                                handleChange={handleChange}
+                                />
+                                {label === "Title" &&  <div className='job-divider'></div>}
+                            </Fragment>
+                        ))}
+                    </div>  
+                )
+            }else if(label !== "Title"){
+                return (
+                    <Input
+                    key={label}
+                    name={label}
+                    value={value}
+                    handleChange={handleChange}
+                    />
+                )
+            }
+            
+           
+        })}
         <ul className='job-tasks'>
             {tasks.map((task, index) => (
                 <Fragment key={index}>
@@ -129,15 +151,14 @@ function Input({name, value, handleChange})  {
     return (
         <>
             <input 
-                type="text" 
-                className={name.toLowerCase()}
-                value={value}
-                style={{width: inputWidth + "ch"}}
-                onChange={(e) => handleInput(e, handleChange)}
+            type="text" 
+            className={name.toLowerCase()}
+            value={value}
+            style={{width: inputWidth + "ch"}}
+            onChange={(e) => handleInput(e, handleChange)}
             />
-            {name === "Title" && <div className='experience-divider'></div>}
+            {name === "Company" && <div className='experience-divider'></div>}
         </>
-        
     )
 }
 

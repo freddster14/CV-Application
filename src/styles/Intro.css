@@ -2,9 +2,10 @@ h1.app-name {
     font-size: 3.5em;
     position: absolute;
     left: 50%;
-    top: 0.75%;
+    top: 0%;
     z-index: 2;
-    transform: translate(-50%, 0%) scale(1);
+    text-align: center;
+    transform: translateX(-50%);
     background: linear-gradient(#ffffff 40%, #002d55 100% );
     -webkit-background-clip: text;
     color: transparent;
@@ -39,7 +40,7 @@ h1.app-name {
     z-index: 1;
     background-color: rgba(0, 0, 0, 0.795);
     width: 100vw;
-    height: 100vh;
+    height: 100%;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
