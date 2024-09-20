@@ -38,16 +38,19 @@ body {
 
 
 .pdf-button {
-  width: 82%;
+  width: 78%;
+  background-color: white;
+  color: #303D50;
+  margin-bottom: 6px;
   max-width: 780px;
   border-radius: 10px;
-  border: 2px solid black;
+  border: 2px solid rgb(134, 134, 134);
   top: 200px;
-  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.548);
+  box-shadow: 1px 1px 5px rgb(255, 255, 255);
   transform: scale(1.1);
   transition: transform 0.25s linear 0.1s;
-  padding: 8px 22px;
-  font-size: 1.3em;
+  padding: 9px 0px;
+  font-size: 1.5em;
   font-weight: bold;
 }
 
