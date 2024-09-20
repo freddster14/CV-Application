@@ -1,28 +1,4 @@
-#root {
-  max-width: 850px;
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  justify-content: space-between;
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  font-size: 0.95em;
-  margin: 100px auto 0px auto;
-  border-radius: 7px;
-  background-color: white;
-}
 
-body {
-  margin: 1px;
-  padding: 0px;
-}
-
-
-.app {
-  padding: 0px 30px 20px 30px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
 
 
 .header {
@@ -111,21 +87,25 @@ button:hover, button:focus {
 
 
 @media screen and (max-width:750px) {
-  #root {
+  div#root {
     font-size: 0.7em;
-    width: 99%;
-    margin-top: 95px;
   }
 
-  .app {
+  div.app {
     padding-left: 20px;
     padding-right: 20px;
   }
 
   #root .app-name {
-    font-size: 4.5em;
-    width: 300px;
+    top: 5px;
+    width: 60vw;
   }
+
+  button.pdf-button {
+    top: 170px;
+    padding: 8px 18px;
+  }
+
   button.close-modal {
     width: 34px;
     height: 34px;
@@ -152,6 +132,7 @@ button:hover, button:focus {
     height: 34px;
     background-size: 75%;
   }
+
   .experience-divider, .education-divider {
     height: 12px;
     width: 2px;
@@ -168,9 +149,12 @@ button:hover, button:focus {
 }
 
 @media screen and (max-width:500px) {
-  #root {
+  div#root {
     font-size: 0.60em;
-    margin-top: 90px;
+  }
+  
+  #root .app-name{
+    width: 210px;
   }
   
 
@@ -180,7 +164,7 @@ button:hover, button:focus {
   }
 
   button.pdf-button {
-    top: 115px;
+    top: 160px;
     padding: 8px 18px;
   }
 
@@ -199,12 +183,9 @@ button:hover, button:focus {
   div.link img {
     width: 20px;
   }
-  .experience-container, .general, .education-container {
-    padding: 15px 30px;
-  }
-
-  .experience-container {
-    padding-bottom: 0px;
+  
+  .job-divider{
+    margin: 0px 4px;
   }
 
   .header button, .delete-form {

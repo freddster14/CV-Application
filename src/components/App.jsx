@@ -14,9 +14,9 @@ function App() {
   const [link, setLink] = useState("https://www.google.com/");
   
 
+
   return (
     <div className='app'>
-      <button className='pdf-button' onClick={printPdf}>PDF</button>
       <General
       name={name} 
       handleNameChange={setName}
@@ -45,18 +45,19 @@ function printPdf() {
   let inputs = document.querySelectorAll('input');
   let selects = document.querySelectorAll('select');
   let link = document.createElement('a')
-  let name = document.querySelector(".name").value
+  let name = document.querySelector('.name')
   const options = {
-    margin: [0.3, 0.2],
-    filename:  name + ' Resume.pdf',
+    margin: [0.4, 0.5, 0.5 , 0.5],
+    filename:  `${name.value} Resume.pdf`,
     image: { type: 'jpeg', quality: 0.98 },
     html2canvas: { scale: 2, windowWidth: '1000px' },
     jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' },
     enableLinks: true,
     pagebreak: {mode: 'avoid-all'}
   };
-
   app.style.fontSize = '0.9em'
+  app.style.width = "100%"
+  app.style.padding = '0px'
   removeInputs(selects, link, buttons, inputs)
   
   //Download PDF
@@ -64,6 +65,11 @@ function printPdf() {
 
   setTimeout(() => {  
     addInputs(selects, link, buttons, inputs);
+    app.style.fontSize = '';
+    app.style.width = "";
+    app.style.padding = ''
+
+
 
   }, 100)
 }
@@ -82,19 +88,18 @@ function removeInputs(selects, link, buttons, inputs) {
     let newP = document.createElement('p')
     newP.textContent = input.value
     newP.classList.add(input.className)
+
     if(input.className === "link") {
-      link.href = input.value
-      //Short link text
-      let e = input.value;
-      (e.indexOf('w') === 8) ? e = e.slice(12) : e = e.slice(8)
-      let cut = e.indexOf("/")
-      link.textContent = e.slice(0 , cut--)
-      link.classList.add(input.className)
-      input.parentNode.replaceChild(link, input)
+      link.href = input.value;
+      let trimmedLink = new URL(input.value).hostname; // Simplified trimming
+      link.textContent = trimmedLink;
+      link.classList.add(input.className);
+      input.parentNode.replaceChild(link, input);
     } else {
       input.parentNode.replaceChild(newP, input)
     }
-  })
+  });
+
   buttons.forEach(button => {
     button.style.opacity = "0%"
   })
@@ -102,20 +107,17 @@ function removeInputs(selects, link, buttons, inputs) {
 
 function addInputs(selects, link, buttons, inputs) {
   let count = 0;
-  link.parentNode.replaceChild(inputs[5], link)
+
+  link.parentNode.replaceChild(inputs[5], link);
+  inputs = Array.from(inputs).filter(input => input.className !== "link");
+
   let allP = document.querySelectorAll("p");
   allP.forEach((p, index) => {
-    if(inputs[index - count] === undefined) {
-      console.log(inputs[index - count])
-      console.log("ran")
-      return
-    }
-    if(index >= 5) index++ 
+    if(!inputs[index - count]) return;
     if(p.className === 'degree-select') {
       p.parentNode.replaceChild(selects[count], p)
       count += 1
     } else {
-      //console.log(inputs[index-count], p, index, inputs.length)
       p.parentNode.replaceChild(inputs[index - count], p)
     }
   })
@@ -126,4 +128,4 @@ function addInputs(selects, link, buttons, inputs) {
 
 
 
-export default App
+export  {App, printPdf}

@@ -8,14 +8,41 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+#root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  overflow: hidden;
+  font-size: 0.95em;
+  margin-bottom: 50px;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  gap: 17px;
+  flex-direction: column;
+}
+
+body {
+  margin: 1px;
+  padding: 0px;
+}
+
+
+.app {
+  width: min(850px, 88%);
+  padding: 30px 45px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 7px;
+  background-color: white;
+  gap: 10px;
+}
 
 
 .pdf-button {
-  position: absolute;
-  left: 70.5%;
+  width: 82%;
+  max-width: 780px;
   border-radius: 10px;
   border: 2px solid black;
-  top: 140px;
+  top: 200px;
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.548);
   transform: scale(1.1);
   transition: transform 0.25s linear 0.1s;

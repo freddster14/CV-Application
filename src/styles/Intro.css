@@ -1,11 +1,11 @@
 h1.app-name {
-    font-size: 3.5em;
-    position: absolute;
-    left: 50%;
-    top: 0%;
-    z-index: 2;
+    font-size: 4.5em;
+    width: fit-content;
+    position: relative;
+    margin-top: 8px;
+    z-index: 1;
     text-align: center;
-    transform: translateX(-50%);
+    transform: scale(1);
     background: linear-gradient(#ffffff 40%, #002d55 100% );
     -webkit-background-clip: text;
     color: transparent;
@@ -38,13 +38,10 @@ h1.app-name {
 .modal-backdrop {
     content: '';
     z-index: 1;
-    background-color: rgba(0, 0, 0, 0.795);
+    background-color: rgba(0, 0, 0, 0.685);
     width: 100vw;
-    height: 100%;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    position: absolute;
+    height: 100vh;
+    position: fixed;
 }
 
 

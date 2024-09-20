@@ -4,22 +4,18 @@ export default function Intro() {
 
     function closeModal() {
         document.querySelector('.modal-container').remove()
-        document.querySelector('.modal-backdrop').remove()
-        document.querySelector('.app-name').style.transform = "translate(-50%, 10%) scale(1)"
+        document.querySelector('.modal-backdrop').remove()  
+        document.querySelector('.app-name').style.transform = ""
+
     }
     setTimeout(() => {
-        let appName = document.querySelector('.app-name')
-        let width = window.innerWidth
-        if(width < 751) {
-            appName.style.transform = "translate(-50%, 440%) scale(2)"
-        } else{
-            appName.style.transform = "translate(-50%, 340%) scale(1.9)"
-        }
+        document.querySelector('.app-name').style.transform = "scale(1.5)";
+        
     },100)
     return (
         <>  
-            <h1 className="app-name">CV Builder</h1>
             <div className='modal-backdrop'></div>
+            <h1 className="app-name">CV Builder</h1>
             <div className='modal-container'>
                 <h1>Make your own Resume!</h1>
                 <p>

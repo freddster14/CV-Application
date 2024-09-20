@@ -59,17 +59,24 @@ function MakeEducation({
         "Doctoral -",
     ];
     const fields = [
-        {label: 'Major', value: major, handleChange: setMajor},
         {label: 'School', value: school, handleChange: setSchool},
         {label: 'Graduation', value: graduationDate, handleChange: setGraduationDate},
     ]
     return (
     <div className='forms'>
-        <select className='degree-select' value={degree} onChange={(e) => setDegree(e.target.value)}>
-            {options.map((option) => (
-                <option key={option} value={option}>{option}</option>
-            ))}
-        </select>
+        <div className="degree-major">
+            <select className='degree-select' value={degree} onChange={(e) => setDegree(e.target.value)}>
+                {options.map((option) => (
+                    <option key={option} value={option}>{option}</option>
+                ))}
+            </select>
+            <Input
+            key='Major'
+            name='Major'
+            value={major}
+            handleChange={setMajor}
+            />
+        </div>
         {fields.map(({label, value, handleChange}) => (
             <Input
             key={label}
