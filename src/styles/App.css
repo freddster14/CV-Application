@@ -47,6 +47,7 @@ p{
   justify-content: center;
   width: 42px;
   height: 42px;
+  position: relative;
   border-radius: 50%;
   background-color: #213547;
   color: white;
