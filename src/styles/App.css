@@ -1,6 +1,3 @@
-
-
-
 .header {
   display: flex;
   justify-content: space-between;
@@ -30,6 +27,7 @@ p{
   grid-template-columns: auto 13px 1fr 43px;
   align-items: center;
   justify-content: start;
+  row-gap: 3px;
   margin-bottom: 10px;
 }
 

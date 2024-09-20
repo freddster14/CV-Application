@@ -41,10 +41,13 @@
 
 .school, .graduation {
     grid-row: 3;
-    margin-left: 5px;
     font-size: 1.1em;
     color: #67acc7;
     font-family: inherit;
+}
+
+.school {
+    margin-left: 6px;
 }
 
 
