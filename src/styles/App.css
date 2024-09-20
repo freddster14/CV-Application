@@ -14,12 +14,6 @@ p{
   margin: 0px;
   font-family: inherit;
 }
-.header button {
-  font-size: 2.5em;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 
 
 .forms {
@@ -47,6 +41,10 @@ p{
 
 
 .header-button {
+  font-size: 2.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 42px;
   height: 42px;
   border-radius: 50%;
@@ -96,7 +94,6 @@ button:hover, button:focus {
 
   #root .app-name {
     top: 5px;
-    width: 60vw;
   }
 
   button.pdf-button {
@@ -150,11 +147,6 @@ button:hover, button:focus {
   div#root {
     font-size: 0.60em;
   }
-  
-  #root .app-name{
-    width: 210px;
-  }
-  
 
   button.close-modal {
     width: 30px;
