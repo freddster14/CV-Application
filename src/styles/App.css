@@ -101,7 +101,7 @@ button:hover, button:focus {
     padding: 8px 18px;
   }
 
-  button.close-modal {
+  .modal-container .close-modal {
     width: 34px;
     height: 34px;
   }
@@ -122,7 +122,7 @@ button:hover, button:focus {
     width: 24px;
   }
 
-  .header button, .delete-form {
+  .header-button, .delete-form {
     width: 34px;
     height: 34px;
     background-size: 75%;
@@ -148,7 +148,7 @@ button:hover, button:focus {
     font-size: 0.60em;
   }
 
-  button.close-modal {
+  .modal-container .close-modal {
     width: 30px;
     height: 30px;
   }
@@ -178,7 +178,7 @@ button:hover, button:focus {
     margin: 0px 4px;
   }
 
-  .header button, .delete-form {
+  .header-button, .delete-form {
     width: 28px;
     height: 28px;
     background-size: 75%;
