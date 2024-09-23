@@ -15,7 +15,6 @@ p{
   font-family: inherit;
 }
 
-
 .forms {
   display: grid;
   grid-template-columns: auto 13px 1fr 43px;
@@ -26,19 +25,14 @@ p{
 }
 
 .title, .role, .company, .date, .task, .major, .school, .graduation  {
-  min-width: 65px;
+  min-width: 43px;
   border:  2px solid transparent;
   font-weight: bold;
   outline: none;
   font-family: inherit;
 }
 
-.app input:hover, .app input:focus {
-  border: 2px solid black;
-}
-
-
-
+.app input:hover, .app input:focus {border: 2px solid black;}
 
 .header-button {
   font-size: 2.5em;
@@ -56,11 +50,7 @@ p{
   transition: transform 0.25s linear 0.1s;
 }
 
-button:hover, button:focus {
-  transform: scale(1.2);
-
-}
-
+button:hover, button:focus {transform: scale(1.2);}
 
 .delete-form{
   grid-row: 1/4;
@@ -78,10 +68,6 @@ button:hover, button:focus {
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.658);
   transition: transform 0.25s linear 0.1s;
 }
-
-
-
-
 
 @media screen and (max-width:750px) {
   div#root {
@@ -124,7 +110,7 @@ button:hover, button:focus {
   }
 
   .header-button, .delete-form {
-    width: 34px;
+    max-width: 34px;
     height: 34px;
     background-size: 75%;
   }
@@ -146,7 +132,7 @@ button:hover, button:focus {
 
 @media screen and (max-width:500px) {
   div#root {
-    font-size: 0.60em;
+    font-size: 0.6em;
   }
 
   .modal-container .close-modal {
@@ -182,6 +168,7 @@ button:hover, button:focus {
   .header-button, .delete-form {
     width: 28px;
     height: 28px;
+    overflow: hidden;
     background-size: 75%;
   }
   .experience-divider, .education-divider {
